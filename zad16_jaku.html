@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 16 - Adrian Jakubek</title>
+    <style>
+        h1 {
+            color: navy;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+       
+        let A = prompt("Podaj pierwszą liczbę A:");
+        let B = prompt("Podaj drugą liczbę B:");
+
+        
+        A = parseInt(A);
+        B = parseInt(B);
+
+        
+        let A3 = A * A * A;
+        let B3 = B * B * B;
+        let aab2 = 3 * A * A * B;
+        let aab3 = 3 * A * B * B;
+
+        
+        let wynik = A3 + aab2 + aab3 + B3;
+
+        
+        document.write("<h1>Rozwinięcie wzoru (A + B)^3</h1>");
+        document.write(`<p>Wczytane liczby: A = ${A}, B = ${B}</p>`);
+        document.write(`<p>Wzór: (A + B)^3 = A^3 + 3A^2B + 3AB^2 + B^3</p>`);
+        document.write(`<p>Obliczenia:</p>`);
+        document.write(`<p>${A}^3 + 3 * ${A}^2 * ${B} + 3 * ${A} * ${B}^2 + ${B}^3 = ${A3} + ${aab2} + ${aab3} + ${B3} = ${wynik}</p>`);
+        
+        u
+        document.write("<hr style='width:100%; height:2px; background-color: navy;'>");
+    </script>
+</body>
+</html>
