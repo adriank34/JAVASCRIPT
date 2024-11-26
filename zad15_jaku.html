@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozkład ułamka egipskiego na dwa identyczne ułamki</title>
+</head>
+<body>
+    <script>
+        
+        let m_jak = prompt("Podaj wartość m (liczba naturalna większa od 0):");
+        
+       
+        m_jak = parseInt(m_jak);
+
+        
+        if (m_jak > 0) {
+            
+            let pierwszyUłamek = `1/${2 * m_jak}`;
+            let drugiUłamek = `1/${2 * m_jak}`;
+
+            
+            document.write(`<h1>Rozkład ułamka egipskiego na dwa identyczne ułamki</h1>`);
+            document.write(`<p>Dla m = ${m_jak}:</p>`);
+            document.write(`<p>1/${m_jak} = ${pierwszyUłamek} + ${drugiUłamek}</p>`);
+        } else {
+            
+            document.write(`<p>Błąd: Podana wartość musi być liczbą naturalną większą od 0.</p>`);
+        }
+    </script>
+</body>
+</html>
