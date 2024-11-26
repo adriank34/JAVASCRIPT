@@ -11,7 +11,7 @@
     <button onclick="rozwiazUlamki()">Rozwiąż zadanie</button>
     <script>
         function rozwiazUlamki() {
-            // Wczytanie wartości zmiennej m
+            
             let m_jak = prompt("Podaj wartość m (liczba naturalna większa od 0):");
 
             // Konwersja na liczbę
@@ -22,11 +22,11 @@
                 return;
             }
 
-            // Obliczanie mianowników według wzoru
+            
             let mianownik1 = m_jak + 1; // Pierwszy mianownik
             let mianownik2 = m_jak * mianownik1; // Drugi mianownik
 
-            // Wyświetlenie wyniku
+            
             document.write(`<h2>Rozkład ułamka 1/${m_jak}:</h2>`);
             document.write(`1/${m_jak} = 1/${mianownik1} + 1/${mianownik2}`);
         }
