@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakubek_Zadanie13_KOD</title>
+</head>
+<body>
+    <h1>Kod zadania</h1>
+    <pre>
+        &lt;script&gt;
+        function rozwiazUlamki() {
+            // Wczytanie wartości zmiennej m
+            let m_kow = prompt("Podaj wartość m (liczba naturalna większa od 0):");
+
+            // Konwersja na liczbę
+            m_kow = parseInt(m_kow);
+
+            if (isNaN(m_kow) || m_kow <= 0) {
+                document.write("Podano nieprawidłową wartość. Spróbuj ponownie.");
+                return;
+            }
+
+            // Obliczanie mianowników według wzoru
+            let mianownik1 = m_kow + 1; // Pierwszy mianownik
+            let mianownik2 = m_kow * mianownik1; // Drugi mianownik
+
+            // Wyświetlenie wyniku
+            document.write("&lt;h2&gt;Rozkład ułamka 1/" + m_kow + ":&lt;/h2&gt;");
+            document.write("1/" + m_kow + " = 1/" + mianownik1 + " + 1/" + mianownik2);
+        }
+        &lt;/script&gt;
+    </pre>
+</body>
+</html>
