@@ -1,0 +1,31 @@
+!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <style>
+   body { font-family: Arial, sans-serif; }
+   .button { margin: 5px; padding: 5px 10px; }
+ </style>
+</head>
+<body>
+<script type="text/javascript">
+ function Pole_jak()
+ {
+    var a_jak = parseFloat(document.getElementById('dlugosc').value);
+    var b_jak = a_jak * a_jak;
+    document.getElementById("nazwa").innerHTML ="Pole kwadratu= " + b_jak.toFixed(2) + " cm^2";
+ }
+ function obwod_jak()
+ {
+    var a_jak = parseFloat(document.getElementById('dlugosc').value);
+    var b_jak = 4 * a_jak;
+    document.getElementById("nazwa").innerHTML ="Obwód kwadratu= " + b_jak.toFixed(2) + " cm";
+ }
+</script>
+ <h1>Wszystko o KWADRACIE</h1><br><br>
+ Podaj długość boku: <input type="text" id="dlugosc" value=""> cm<br><br><br>
+ <input type="button" class="button" name="pole" value="Oblicz pole" onclick="Pole_jak()"><br><br>
+ <input type="button" class="button" name="obwod" value="Oblicz obwod" onclick="obwod_jak()"><br><br>
+ <div style="color:red;font-size:50px;" id="nazwa"></div>
+</body>
+</html>

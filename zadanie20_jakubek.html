@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obliczanie długości boków trójkąta</title>
+    <script>
+        function distance(x1, y1, x2, y2) {
+            return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        }
+
+        function calculateSides() {
+            let xa = parseFloat(document.getElementById("xa").value);
+            let ya = parseFloat(document.getElementById("ya").value);
+            let xb = parseFloat(document.getElementById("xb").value);
+            let yb = parseFloat(document.getElementById("yb").value);
+            let xc = parseFloat(document.getElementById("xc").value);
+            let yc = parseFloat(document.getElementById("yc").value);
+
+            let AB = distance(xa, ya, xb, yb);
+            let BC = distance(xb, yb, xc, yc);
+            let AC = distance(xa, ya, xc, yc);
+
+            document.getElementById("result").innerHTML = 
+                "Długości boków trójkąta:<br>AB = " + AB.toFixed(2) + 
+                "<br>BC = " + BC.toFixed(2) + 
+                "<br>AC = " + AC.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h2>Obliczanie długości boków trójkąta</h2>
+    <form>
+        A(x, y): <input type="text" id="xa"> <input type="text" id="ya"><br>
+        B(x, y): <input type="text" id="xb"> <input type="text" id="yb"><br>
+        C(x, y): <input type="text" id="xc"> <input type="text" id="yc"><br>
+        <button type="button" onclick="calculateSides()">Oblicz</button>
+    </form>
+    <p id="result"></p>
+</body>
+</html>
