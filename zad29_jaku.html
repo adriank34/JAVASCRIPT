@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 29</title>
+</head>
+<body>
+    <h1>Pytania teoretyczne:</h1>
+    <ol>
+        <li>W jaki sposób można określić właściwość danego obiektu (dwa sposoby wraz z przykładami)?</li>
+        <li>W jaki sposób można odwołać się do pól (właściwości) i metod?</li>
+        <li>Wymień cechy charakterystyczne konstruktora.</li>
+        <li>Konstruowanie obiektu na podstawie przykładu - obiekt ma trzy pola oraz jedną metodę.</li>
+        <li>Znaczenie słowa "this". Jak oddzielamy pola oraz metody?</li>
+        <li>Konstruktor w JS na podstawie przykładu wraz z opisem.</li>
+        <li>Znaczenie słowa kluczowego "new" wraz z przykładem.</li>
+        <li>Znaczenie słowa kluczowego "prototype" wraz z przykładem i opisem.</li>
+    </ol>
+    <h1>Odpowiedzi:</h1>
+    <ol>
+        <li>
+            <p>Sposób 1:</p>
+            <pre>
+                nazwa_obiektu.nazwa_właściwości = "tekst"; // dla właściwości typu tekstowego
+                auto.marka = "Opel Omega";
+                nazwa_obiektu.nazwa_właściwości = liczba; // dla właściwości typu liczbowego
+                auto.rok = 1996;
+                auto.cena = 25000;
+            </pre>
+            <p>Sposób 2:</p>
+            <pre>
+                nazwa_obiektu[nazwa_właściwości];
+                auto["cena"] = 25000;
+            </pre>
+        </li>
+        <li>
+            <p>Do pól (właściwości) i metod można się odwołać używając nazwy obiektu, kropki i nazwy pola/metody.</p>
+            <pre>
+                console.log(samochod1.kolor); // wyświetla kolor obiektu samochod
+            </pre>
+        </li>
+        <li>
+            <p>Cechy charakterystyczne konstruktora:</p>
+            <ul>
+                <li>Jest wywoływany automatycznie w chwili tworzenia obiektu danej klasy - na rzecz tego obiektu.</li>
+                <li>Nazywa się tak samo jak klasa.</li>
+                <li>Nie zwraca żadnej wartości.</li>
+                <li>Może przyjmować argumenty, aby następnie powołać do życia obiekt za pomocą operatora "new".</li>
+            </ul>
+        </li>
+        <li>
+            <pre>
+                var osoba_1 = {
+                    nazwisko: 'Kowalski',
+                    imie: 'Jan',
+                    zawod: 'piekarz',
+                    wyświetl: function() {
+                        document.write(this.nazwisko + ' ' + this.imie);
+                    }
+                };
+            </pre>
+        </li>
+        <li>
+            <p>Słowo kluczowe "this" pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu.</p>
+            <p>Pola i metody oddzielamy przecinkami w obrębie jednego obiektu.</p>
+        </li>
+        <li>
+            <pre>
+                function klient(nazwisko_k, imie_k, zawod_k) {
+                    this.nazwisko = nazwisko_k;
+                    this.imie = imie_k;
+                    this.zawod = zawod_k;
+                    this.wypisz = function() {
+                        alert(this.nazwisko + ' ' + this.imie);
+                    };
+                }
+            </pre>
+        </li>
+        <li>
+            <p>Słowo kluczowe "new" służy do tworzenia nowego obiektu na podstawie konstruktora.</p>
+            <pre>
+                var osoba1 = new klient('Kowalski', 'Jan', 'kierowca');
+                var osoba2 = new klient('Nowak', 'Anna', 'sekretarka');
+            </pre>
+        </li>
+        <li>
+            <p>Właściwość "prototype" służy do definowania metod i właściwości dla obiektu.</p>
+            <pre>
+                function klient() {
+                    this.nazwisko = 'Bielski';
+                    this.imie = 'Paweł';
+                }
+                klient.prototype.pisz_dane = function() {
+                    document.write(this.nazwisko + ' ' + this.imie);
+                };
+                klient.prototype.zawod = 'kierowca';
+                var osoba1 = new klient();
+                osoba1.pisz_dane();
+            </pre>
+        </li>
+    </ol>
+</body>
+</html>

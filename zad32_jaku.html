@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programowanie Obiektowe - Zadanie 32</title>
+    <script type="text/javascript">
+        
+        function Komputer(imie_k, nazwisko_k, marka_k, model_k, rok_k) {
+            this.imie = imie_k;
+            this.nazwisko = nazwisko_k;
+            this.marka = marka_k;
+            this.model = model_k;
+            this.rok = rok_k;
+        }
+
+        
+        Komputer.prototype.komputer_wyswietl_nazwisko_jakubek = function() {
+            document.write('Imię: ' + this.imie + '<br>');
+            document.write('Nazwisko: ' + this.nazwisko + '<br>');
+            document.write('Nazwa obiektu: Komputer<br>');
+            document.write('Marka: ' + this.marka + '<br>');
+            document.write('Model: ' + this.model + '<br>');
+            document.write('Rok: ' + this.rok + '<br>');
+        };
+
+       
+        Komputer.prototype.wiek = 17;
+
+        
+        Komputer.prototype.komputer_pokaz_nazwisko_jakubek = function() {
+            document.write('Nowe pole: Wiek komputera: ' + this.wiek + ' lat<br>');
+        };
+
+        // Tworzenie obiektów
+        var komputer1 = new Komputer("Adrian", "Jakubek", "Dell", "XPS 15", 2021);
+        var komputer2 = new Komputer("Kasia", "Nowak", "HP", "Pavilion", 2020);
+        var komputer3 = new Komputer("Marek", "Kowalski", "Acer", "Aspire 5", 2022);
+
+        
+        function wyswietlDaneKomputery() {
+            komputer1.komputer_wyswietl_nazwisko_jakubek();
+            komputer1.komputer_pokaz_nazwisko_jakubek();
+
+            komputer2.komputer_wyswietl_nazwisko_jakubek();
+            komputer2.komputer_pokaz_nazwisko_jakubek();
+
+            komputer3.komputer_wyswietl_nazwisko_jakubek();
+            komputer3.komputer_pokaz_nazwisko_jakubek();
+        }
+    </script>
+</head>
+<body>
+    <h1>Programowanie obiektowe w JavaScript</h1>
+    <button onclick="wyswietlDaneKomputery()">Wyświetl dane o komputerach</button>
+</body>
+</html>
