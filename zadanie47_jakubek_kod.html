@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Kod źródłowy – Zadanie 47</title>
+  <style>
+    textarea {
+      width: 100%;
+      height: 450px;
+      font-family: monospace;
+      font-size: 14px;
+      padding: 10px;
+      background: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Zadanie 47 – Kod źródłowy</h2>
+  <textarea readonly>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Sprawdzanie trójkąta – Jakubek&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div style="color:blue; font-size:40px;"&gt;
+    &lt;script&gt;
+      let a_jak, b_jak, c_jak;
+
+      do {
+        a_jak = parseFloat(prompt("Podaj bok a trójkąta (cm):", ""));
+        b_jak = parseFloat(prompt("Podaj bok b trójkąta (cm):", ""));
+        c_jak = parseFloat(prompt("Podaj bok c trójkąta (cm):", ""));
+
+        if (!(a_jak &gt; 0 &amp;&amp; b_jak &gt; 0 &amp;&amp; c_jak &gt; 0)) {
+          alert("Wszystkie boki muszą być większe od zera!");
+          continue;
+        }
+
+        if (!((a_jak + b_jak &gt; c_jak) &amp;&amp; (a_jak + c_jak &gt; b_jak) &amp;&amp; (b_jak + c_jak &gt; a_jak))) {
+          alert("Boki nie spełniają nierówności trójkąta, spróbuj ponownie.");
+        }
+      } while (!(a_jak &gt; 0 &amp;&amp; b_jak &gt; 0 &amp;&amp; c_jak &gt; 0) || !((a_jak + b_jak &gt; c_jak) &amp;&amp; (a_jak + c_jak &gt; b_jak) &amp;&amp; (b_jak + c_jak &gt; a_jak)));
+
+      document.write("Boki trójkąta: a = " + a_jak + " cm, b = " + b_jak + " cm, c = " + c_jak + " cm.&lt;br&gt;");
+      document.write("&lt;b&gt;Te boki tworzą trójkąt!&lt;/b&gt;");
+    &lt;/script&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </textarea>
+</body>
+</html>

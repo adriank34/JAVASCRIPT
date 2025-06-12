@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 43 – liczby parzyste</title>
+    <style>
+        body { font-family: Arial, sans-serif; font-size: 20px; padding: 20px; }
+        .wynik { color: green; font-size: 30px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<h1>Zadanie 43 – liczby parzyste</h1>
+
+<div class="wynik" id="wynik"></div>
+
+<script>
+    let koniec_petli_jak = prompt("Podaj liczbę końcową:");
+    koniec_petli_jak = parseInt(koniec_petli_jak);
+
+    let wynikDiv = document.getElementById("wynik");
+
+    for (let i_jak = 2; i_jak <= koniec_petli_jak; i_jak++) {
+        if (i_jak % 2 === 0) {
+            wynikDiv.innerHTML += i_jak + " ";
+        }
+    }
+</script>
+
+</body>
+</html>

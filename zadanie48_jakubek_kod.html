@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod źródłowy – Zadanie 48</title>
+</head>
+<body>
+    <h2>Kod źródłowy – zadanie48_jak.html</h2>
+    <textarea rows="30" cols="100">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 48 – Jakubek</title>
+</head>
+<body>
+    <h2>Suma szeregu harmonicznego od 1 do 1 000 000</h2>
+    <button onclick="obliczSume()">Oblicz sumę</button>
+    <p id="wynik"></p>
+
+    <script>
+        function obliczSume() {
+            let suma_jak = 0;
+            let i_jak = 1;
+
+            while (i_jak <= 1000000) {
+                suma_jak = suma_jak + 1 / i_jak;
+                i_jak++;
+            }
+
+            document.getElementById("wynik").innerText =
+                "Suma szeregu harmonicznego: " + suma_jak.toFixed(6);
+        }
+    </script>
+</body>
+</html>
+    </textarea>
+</body>
+</html>

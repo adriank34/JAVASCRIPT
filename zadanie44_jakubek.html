@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 44 – Imię i nazwisko na zmianę</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .wynik {
+      color: darkblue;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Zadanie 44 – Imię i nazwisko na zmianę</h1>
+
+<div class="wynik" id="wynik"></div>
+
+<script>
+  const imie_jak = "Adrian";
+  const nazwisko_jak = "Jakubek";
+
+  const ile_razy_jak = 13;       
+  const wielkosc_liter_jak = 41; 
+
+  const wynik = document.getElementById("wynik");
+  wynik.innerHTML += "ilość wykonania pętli = " + ile_razy_jak + "<br>";
+  wynik.innerHTML += "wielkość liter = " + wielkosc_liter_jak + "px<br><br>";
+
+  for (let i_jak = 1; i_jak <= ile_razy_jak; i_jak++) {
+    if (i_jak % 2 === 0) {
+      wynik.innerHTML += `<span style="font-size:${wielkosc_liter_jak}px;">${imie_jak}</span><br>`;
+    } else {
+      wynik.innerHTML += `<span style="font-size:${wielkosc_liter_jak}px;">${nazwisko_jak}</span><br>`;
+    }
+  }
+</script>
+
+</body>
+</html>
+

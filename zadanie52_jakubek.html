@@ -1,0 +1,37 @@
+<html>
+<body>
+    <div style="font-family: monospace; color: black;">
+        <textarea rows="15" cols="40" readonly id="prostokat"></textarea>
+        <script>
+            
+            let a_jak = (7 % 4) + 5; 
+            let b_jak = (6 % 6) + 20; 
+
+            let output = "";
+
+            
+            for (let i = 0; i < b_jak; i++) {
+                output += "*";
+            }
+            output += "\n";
+
+            
+            for (let i = 0; i < a_jak - 2; i++) {
+                output += "*";
+                for (let j = 0; j < b_jak - 2; j++) {
+                    output += " ";
+                }
+                output += "*\n";
+            }
+
+            
+            for (let i = 0; i < b_jak; i++) {
+                output += "*";
+            }
+
+            
+            document.getElementById("prostokat").value = output;
+        </script>
+    </div>
+</body>
+</html>

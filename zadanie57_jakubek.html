@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Pierwiastki – Jakubek</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        #output {
+            white-space: pre-line;
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Pierwiastki liczb – Jakubek</h2>
+
+<div id="output"></div>
+<button id="nextBtn">Pokaż kolejne 3 linie</button>
+
+<script>
+    const numerDziennika = 9;
+    const max = numerDziennika + 15;
+    let aktualna = numerDziennika;
+    const output = document.getElementById("output");
+    const button = document.getElementById("nextBtn");
+
+    function pokazTrzyLinie() {
+        for (let i = 0; i < 3 && aktualna <= max; i++) {
+            let pierw2 = Math.sqrt(aktualna);
+            let pierw4 = Math.sqrt(pierw2);
+            output.innerText += `I=${aktualna} pierw_2(${aktualna})=${pierw2.toFixed(2)} pierw_4(${aktualna})=${pierw4.toFixed(2)}\n`;
+            aktualna++;
+        }
+
+        if (aktualna > max) {
+            button.disabled = true;
+            button.innerText = "Koniec";
+        }
+    }
+
+    
+    pokazTrzyLinie();
+
+    
+    button.addEventListener("click", pokazTrzyLinie);
+</script>
+
+</body>
+</html>
+

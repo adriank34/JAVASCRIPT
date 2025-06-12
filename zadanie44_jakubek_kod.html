@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Kod źródłowy – Zadanie 44</title>
+  <style>
+    textarea {
+      width: 100%;
+      height: 600px;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+      padding: 10px;
+      background: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      resize: vertical;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Zadanie 44 – Kod źródłowy</h1>
+
+<textarea readonly>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Zadanie 44 – Imię i nazwisko na zmianę&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .wynik {
+      color: darkblue;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Zadanie 44 – Imię i nazwisko na zmianę&lt;/h1&gt;
+
+&lt;div class="wynik" id="wynik"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+  const imie_jak = "Adrian";
+  const nazwisko_jak = "Jakubek";
+
+  const ile_razy_jak = 13;       
+  const wielkosc_liter_jak = 41; /
+
+  const wynik = document.getElementById("wynik");
+  wynik.innerHTML += "ilość wykonania pętli = " + ile_razy_jak + "&lt;br&gt;";
+  wynik.innerHTML += "wielkość liter = " + wielkosc_liter_jak + "px&lt;br&gt;&lt;br&gt;";
+
+  for (let i_jak = 1; i_jak &lt;= ile_razy_jak; i_jak++) {
+    if (i_jak % 2 === 0) {
+      wynik.innerHTML += `&lt;span style="font-size:${wielkosc_liter_jak}px;"&gt;${imie_jak}&lt;/span&gt;&lt;br&gt;`;
+    } else {
+      wynik.innerHTML += `&lt;span style="font-size:${wielkosc_liter_jak}px;"&gt;${nazwisko_jak}&lt;/span&gt;&lt;br&gt;`;
+    }
+  }
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+
+</body>
+</html>

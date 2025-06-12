@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 41 - Pętle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .petla {
+            border: 2px solid #333;
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 20px;
+        }
+        .petla img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rodzaje Pętli</h1>
+
+    <div class="petla">
+        <h2>Pętla for</h2>
+        <p><strong>Konstrukcja:</strong></p>
+        <pre>
+for (inicjalizacja; warunek; zmiana) {
+}
+        </pre>
+        <p><strong>Opis:</strong> Pętla for używana jest, gdy znana jest liczba powtórzeń. Składa się z trzech części: inicjalizacji, warunku oraz inkrementacji/dekrementacji.</p>
+        <p><strong>Schemat blokowy:</strong></p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/For-loop-diagram.svg/400px-For-loop-diagram.svg.png" alt="Schemat blokowy pętli for">
+    </div>
+
+    <div class="petla">
+        <h2>Pętla while (z kontrolowanym wejściem)</h2>
+        <p><strong>Konstrukcja:</strong></p>
+        <pre>
+while (warunek) {
+}
+        </pre>
+        <p><strong>Opis:</strong> Pętla while wykonuje kod dopóki warunek jest prawdziwy. Sprawdza warunek przed każdym wykonaniem – jeśli jest fałszywy od początku, pętla się nie wykona.</p>
+        <p><strong>Schemat blokowy:</strong></p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/While-loop-diagram.svg/400px-While-loop-diagram.svg.png" alt="Schemat blokowy pętli while">
+    </div>
+
+    <div class="petla">
+        <h2>Pętla do...while (z kontrolowanym wyjściem)</h2>
+        <p><strong>Konstrukcja:</strong></p>
+        <pre>
+do {  
+} while (warunek);
+        </pre>
+        <p><strong>Opis:</strong> Pętla do while zawsze wykona się co najmniej raz, ponieważ warunek sprawdzany jest po pierwszym wykonaniu kodu.</p>
+        <p><strong>Schemat blokowy:</strong></p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Do-while-loop-diagram.svg/400px-Do-while-loop-diagram.svg.png" alt="Schemat blokowy pętli do while">
+    </div>
+</body>
+</html>

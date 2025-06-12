@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod źródłowy – Zadanie 43</title>
+    <style>
+        textarea {
+            width: 100%;
+            height: 500px;
+            font-family: Consolas, monospace;
+            font-size: 14px;
+            padding: 15px;
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Zadanie 43 – Kod źródłowy</h1>
+
+<textarea readonly>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Zadanie 43 – liczby parzyste&lt;/title&gt;
+    &lt;style&gt;
+        body { font-family: Arial, sans-serif; font-size: 20px; padding: 20px; }
+        .wynik { color: green; font-size: 30px; margin-top: 20px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Zadanie 43 – liczby parzyste&lt;/h1&gt;
+
+&lt;div class="wynik" id="wynik"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    let koniec_petli_jak = prompt("Podaj liczbę końcową:");
+    koniec_petli_jak = parseInt(koniec_petli_jak);
+
+    let wynikDiv = document.getElementById("wynik");
+
+    for (let i_jak = 2; i_jak &lt;= koniec_petli_jak; i_jak++) {
+        if (i_jak % 2 === 0) {
+            wynikDiv.innerHTML += i_jak + " ";
+        }
+    }
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+
+</body>
+</html>

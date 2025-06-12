@@ -1,0 +1,37 @@
+<html>
+  <body>
+    <pre id="output" style="font-family: monospace; font-size: 16px;"></pre>
+
+    <script>
+      
+      function czyPierwsza(n) {
+        if (n < 2) return false;
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+          if (n % i === 0) return false;
+        }
+        return true;
+      }
+
+      let wynik = "";
+      let licznikLinii = 0;
+
+      for (let i = 0; i < 40; i++) {
+        let w = i * i + i + 41;
+
+        if (czyPierwsza(w)) {
+          wynik += `i=${i}  w(${i})=${w}\n`;
+          licznikLinii++;
+        }
+
+        
+        if (licznikLinii === 5) {
+          wynik += "\n--- Zatrzymanie ekranu ---\n\n";
+          licznikLinii = 0;
+        }
+      }
+
+      document.getElementById("output").innerText = wynik;
+    </script>
+  </body>
+</html>
+

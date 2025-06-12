@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Sprawdzanie trójkąta – Jakubek</title>
+</head>
+<body>
+  <div style="color:blue; font-size:40px;">
+    <script>
+      let a_jak, b_jak, c_jak;
+
+      do {
+        a_jak = parseFloat(prompt("Podaj bok a trójkąta (cm):", ""));
+        b_jak = parseFloat(prompt("Podaj bok b trójkąta (cm):", ""));
+        c_jak = parseFloat(prompt("Podaj bok c trójkąta (cm):", ""));
+
+        if (!(a_jak > 0 && b_jak > 0 && c_jak > 0)) {
+          alert("Wszystkie boki muszą być większe od zera!");
+          continue; 
+        }
+
+        if (!((a_jak + b_jak > c_jak) && (a_jak + c_jak > b_jak) && (b_jak + c_jak > a_jak))) {
+          alert("Boki nie spełniają nierówności trójkąta, spróbuj ponownie.");
+        }
+      } while (!(a_jak > 0 && b_jak > 0 && c_jak > 0) || !((a_jak + b_jak > c_jak) && (a_jak + c_jak > b_jak) && (b_jak + c_jak > a_jak)));
+
+      document.write("Boki trójkąta: a = " + a_jak + " cm, b = " + b_jak + " cm, c = " + c_jak + " cm.<br>");
+      document.write("<b>Te boki tworzą trójkąt!</b>");
+    </script>
+  </div>
+</body>
+</html>

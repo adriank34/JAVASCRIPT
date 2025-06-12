@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Sprawdzenie danych – Jakubek</title>
+</head>
+<body>
+<div style="color:red; font-size:50px;">
+  <script>
+    let h_jak;
+    do {
+      let liczba1 = prompt("Podaj wysokość trójkąta (cm):", "");
+      h_jak = parseFloat(liczba1);
+    } while (h_jak <= 0);
+
+    let a_jak;
+    do {
+      let liczba2 = prompt("Podaj podstawę trójkąta (cm):", "");
+      a_jak = parseFloat(liczba2);
+    } while (!(a_jak > 0));
+
+    let Pole = (a_jak * h_jak) / 2;
+    document.write("Pole trójkąta = " + Pole.toFixed(2) + " cm²" + "<br>");
+  </script>
+</div>
+</body>
+</html>
